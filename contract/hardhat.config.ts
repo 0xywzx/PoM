@@ -30,6 +30,9 @@ const config: HardhatUserConfig = {
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
+    deployedNetwork: {
+      url: process.env.RPC,
+    },
   },
   gasReporter: {
     enabled: process.env.REPORT_GAS !== undefined,
