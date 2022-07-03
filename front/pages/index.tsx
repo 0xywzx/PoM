@@ -52,8 +52,6 @@ const Home: NextPage = () => {
 
   const handleScan = async (data:any) => {
     console.log(1)
-    const firstSig = JSON.parse(qrvalue)
-    console.log(firstSig)
 
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     const secSig = await getTypedSignature(
@@ -61,8 +59,10 @@ const Home: NextPage = () => {
       contractAddress,
       20200222,
       provider.getSigner(),
-    );
+      );
 
+    const firstSig = JSON.parse(qrvalue)
+    console.log(firstSig)
     const sigs = [firstSig, secSig]
 
     setData(data.text)
@@ -108,7 +108,7 @@ const Home: NextPage = () => {
           Scan QR code
         </button>
         { isScan && <QrReader
-            delay={300}
+            delay={500}
             onError={handleError}
             onScan={handleScan}
             style={{ width: '50%' }}
