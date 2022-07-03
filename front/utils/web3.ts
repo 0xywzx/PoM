@@ -54,9 +54,9 @@ const getTypedSignature = async (
   return {
     r: "0x" + signature.substring(2).substring(0, 64),
     s: "0x" + signature.substring(2).substring(64, 128),
-    v: parseInt(signature.substring(2).substring(128, 130), 16),
+    v: signature.substring(2).substring(128, 130),
     address: await signer.getAddress(),
-    nonce: nonce
+    nonce: String(nonce)
   }
 
 }
