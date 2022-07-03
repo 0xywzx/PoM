@@ -65,7 +65,7 @@ const Home: NextPage = () => {
     // console.log(firstSig)
     // const sigs = [firstSig, secSig]
 
-    setData(data.text)
+    // setData(data.text)
   }
 
   const handleError = (err:any) => {
