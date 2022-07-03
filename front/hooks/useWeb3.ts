@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import abi from '../../contract/artifacts/contracts/ProofOfMeet.sol/ProofOfMeet.json';
+import abi from '../abis/ProofOfMeet.json';
 import { ethers } from 'ethers';
 import { parseEther, formatUnits, formatEther } from "ethers/lib/utils";
 

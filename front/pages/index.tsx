@@ -56,12 +56,15 @@ const Home: NextPage = () => {
     console.log(firstSig)
 
     const provider = new ethers.providers.Web3Provider(window.ethereum);
-    const sig = await getTypedSignature(
+    const secSig = await getTypedSignature(
       chainId,
       contractAddress,
       20200222,
       provider.getSigner(),
     );
+
+    const sigs = [firstSig, secSig]
+
     setData(data.text)
   }
 
