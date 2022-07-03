@@ -52,15 +52,15 @@ const Home: NextPage = () => {
 
   const handleScan = async (data:any) => {
     console.log(1)
-
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
-    const secSig = await getTypedSignature(
-      chainId,
-      contractAddress,
-      20200222,
-      provider.getSigner(),
-    );
-
+    if(data) {
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const secSig = await getTypedSignature(
+        chainId,
+        contractAddress,
+        20200222,
+        provider.getSigner(),
+      );
+    }
     // const firstSig = JSON.parse(qrvalue)
     // console.log(firstSig)
     // const sigs = [firstSig, secSig]
