@@ -111,7 +111,7 @@ const Home: NextPage = () => {
             delay={500}
             onError={handleError}
             onScan={handleScan}
-            style={{ width: '50%' }}
+            style={{ width: '80%' }}
           />
         }
         <p>{data}</p>
