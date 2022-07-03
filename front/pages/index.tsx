@@ -59,11 +59,11 @@ const Home: NextPage = () => {
       contractAddress,
       20200222,
       provider.getSigner(),
-      );
+    );
 
-    const firstSig = JSON.parse(qrvalue)
-    console.log(firstSig)
-    const sigs = [firstSig, secSig]
+    // const firstSig = JSON.parse(qrvalue)
+    // console.log(firstSig)
+    // const sigs = [firstSig, secSig]
 
     setData(data.text)
   }
